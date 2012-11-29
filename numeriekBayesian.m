@@ -1,4 +1,4 @@
-function P = numeriekBayesian( F, a, c)
+function P = numeriekBayesian( F, a, c )
 
 data = importdata('iris.txt');
 

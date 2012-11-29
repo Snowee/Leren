@@ -1,8 +1,14 @@
+% Eerste examples per klasse
 % 5.1,3.5,1.4,0.2,1
 % 7.0,3.2,4.7,1.4,2
 % 6.3,3.3,6.0,2.5,3
+% Laatste examples per klasse
+% 5.0,3.3,1.4,0.2,1
+% 5.7,2.8,4.1,1.3,2
+% 5.9,3.0,5.1,1.8,3
 
 function class = numeriekBayes( f1, f2, f3, f4 )
+
 PC1A1 = numeriekBayesian(f1, 1, 1);
 PC1A2 = numeriekBayesian(f2, 2, 1);
 PC1A3 = numeriekBayesian(f3, 3, 1);

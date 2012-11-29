@@ -1,0 +1,125 @@
+Er wordt een steekproef genomen van de complete iris dataset, waarbij
+aangenomen dat de a priori kans op de drie soorten irissen gelijk is. 
+Deze steekproef bestaat uit tien rijen waarden uit de complete dataset.
+Deze tien data worden gebruikt om de a posteriori klasseverdeling te vinden
+van alle laatste voorbeelden per klasse, met behulp van de Naive Bayes Classifier.\\
+Die laatste voorbeelden per klasse staan hieronder:
+\begin{verbatim}
+5.0,3.3,1.4,0.2,1
+5.7,2.8,4.1,1.3,2
+5.9,3.0,5.1,1.8,3
+\end{verbatim}
+Hieronder volgen de input en output van de numerieke Bayes Classifier,
+met als invoer de eerste vier waarden van ieder voorbeeld.
+\begin{verbatim}
+>> numeriekBayes(5.0,3.3,1.4,0.2)
+
+Steekproef =
+
+  Columns 1 through 3
+
+    6.0000    2.9000    4.5000
+    5.7000    2.9000    4.2000
+    6.2000    2.9000    4.3000
+    7.2000    3.6000    6.1000
+    4.6000    3.6000    1.0000
+    5.8000    4.0000    1.2000
+    4.8000    3.4000    1.6000
+    6.7000    3.0000    5.2000
+    6.7000    3.0000    5.0000
+    7.7000    2.8000    6.7000
+
+  Columns 4 through 5
+
+    1.5000    2.0000
+    1.3000    2.0000
+    1.3000    2.0000
+    2.5000    3.0000
+    0.2000    1.0000
+    0.2000    1.0000
+    0.2000    1.0000
+    2.3000    3.0000
+    1.7000    2.0000
+    2.0000    3.0000
+
+
+ans =
+
+     1
+	 
+>> numeriekBayes(5.7,2.8,4.1,1.3)
+
+Steekproef =
+
+  Columns 1 through 3
+
+    6.2000    2.9000    4.3000
+    4.9000    3.1000    1.5000
+    4.6000    3.1000    1.5000
+    5.0000    2.0000    3.5000
+    6.7000    3.1000    4.4000
+    5.0000    3.5000    1.6000
+    6.1000    2.9000    4.7000
+    6.3000    2.5000    5.0000
+    5.0000    2.3000    3.3000
+    6.0000    2.9000    4.5000
+
+  Columns 4 through 5
+
+    1.3000    2.0000
+    0.1000    1.0000
+    0.2000    1.0000
+    1.0000    2.0000
+    1.4000    2.0000
+    0.6000    1.0000
+    1.4000    2.0000
+    1.9000    3.0000
+    1.0000    2.0000
+    1.5000    2.0000
+
+
+ans =
+
+     2
+	 
+>> numeriekBayes(5.9,3.0,5.1,1.8)
+
+Steekproef =
+
+  Columns 1 through 3
+
+    6.1000    2.9000    4.7000
+    5.0000    3.4000    1.6000
+    5.1000    3.8000    1.9000
+    7.6000    3.0000    6.6000
+    6.7000    3.1000    5.6000
+    6.3000    2.5000    5.0000
+    5.5000    2.4000    3.8000
+    5.1000    2.5000    3.0000
+    5.5000    2.4000    3.7000
+    5.1000    3.4000    1.5000
+
+  Columns 4 through 5
+
+    1.4000    2.0000
+    0.4000    1.0000
+    0.4000    1.0000
+    2.1000    3.0000
+    2.4000    3.0000
+    1.9000    3.0000
+    1.1000    2.0000
+    1.1000    2.0000
+    1.0000    2.0000
+    0.2000    1.0000
+
+
+ans =
+
+     3	 
+	 
+\end{verbatim}
+De hierboven staande output van classifier heeft toevallig iedere goede
+output gevonden, maar door de beknopte steekproef van maar tien datarijen
+kan niet altijd de juiste klasse worden gevonden. Als hetzelfde voorbeeld
+een aantal keer achter elkaar wordt uitgevoerd, zal een deel van de gevonden
+klasses niet overeenkomen met de juiste klasse.
