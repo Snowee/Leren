@@ -1,11 +1,11 @@
 function P = numeriekBayesian( F, a, c )
-
+% Classes have been changed to 1, 2 and 3
 data = importdata('iris.txt');
-
+% Divide the data by class
 C1 = data(1:49,:);
 C2 = data(50:98,:);
 C3 = data(99:147,:);
-
+% Divide each class by attribute
 C1A1 = C1(:,1);
 C1A2 = C1(:,2);
 C1A3 = C1(:,3);
@@ -21,7 +21,8 @@ C3A2 = C3(:,2);
 C3A3 = C3(:,3);
 C3A4 = C3(:,4);
 
-
+% For each combination of attribute a and class c:
+% Calculate the chance for that combination
 if a == 1
     if c == 1
         P = normpdf((F-mean(C1A1))/sqrt(var(C1A1)));
